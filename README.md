@@ -1,4 +1,4 @@
-### DEAPHBOCKZ (Devbox) 
+# DEAPHBOCKZ (Devbox) 
 DeaphBockz is a set of Powershell scripts with which you can quickly setup 
 a fully functioning .NET development environment in Windows🤘, but if 
 you customize the various provisioning scripts, it can be any sort of 
@@ -7,23 +7,23 @@ add the created .vhdx (Virtual Hard Disk) file to your bootloader
 and boot natively from this disk. Only the drive is virtual, the rest 
 is all running natively, which means better performance. 
 
-# Used software
+### Used software
 - Convert-WindowsImage Powershell script to convert a Windows .iso to .vhdx.
   Source can be found here: https://github.com/x0nn/Convert-WindowsImage.
 
-# Prerequisites
+### Prerequisites
 - A genuine Windows Installation Media (WIM) .iso file. Can be downloaded from Microsoft or my.visualstudio.com if you have a Visual Studio Subscription.
 - A genuine Windows Product Key for the edition of Windows you want to install.
 - A working Hyper-V installation (optional if you want to boot natively from the .vhdx).
 
-# How to run:
+### How to run:
 - Just run this script as administrator in a Powershell console.
 - After the installation and provisioning is done, you can start the VM
   from the created shortcut on the Desktop. When logging in, a Powershell
   script will be started automatically. This script is setting up your
   Powershell theme for Windows Terminal.
 
-# How to add the created .vhdx to your PC's bootloader:
+### How to add the created .vhdx to your PC's bootloader:
 - Start cmd.exe as administrator (not Powershell!).
 - Execute the following commands: 
   - `bcdedit /export backup-bootloader.dat` (this makes a backup of your current boot settings).
@@ -34,7 +34,7 @@ is all running natively, which means better performance.
 - To restore you original boot settings:
   - `bcdedit /import backup-bootloader.dat`
 
-# Things to improve in the future:
+### Things to improve in the future:
 - Validate VHD Size.
 - Validate CPU Count.
 - Validate Mem Size.
