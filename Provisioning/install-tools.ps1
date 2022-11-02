@@ -7,11 +7,6 @@ Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 choco feature enable -n=allowGlobalConfirmation
 refreshenv
 
-# Install Choco-runner to be able to install chocolatey packages in parallel.
-New-Item -ItemType Directory -Force -Path ".\Temp"
-$ChocoRunnerScript = ".\Temp\choco-runner.ps1"
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Neocky/choco-runner/main/choco-runner.ps1" -OutFile $ChocoRunnerScript
-
 # ---- Install WSL ----
 wsl --install
 wsl --update
