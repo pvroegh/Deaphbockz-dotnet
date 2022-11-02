@@ -1,4 +1,4 @@
-# DEAPHBOCKZ (Devbox) 
+# DEAPHBOCKZ (Devbox - | ˈdef bɒks |) 
 DeaphBockz is a set of Powershell scripts with which you can quickly setup 
 a fully functioning .NET development environment in Windows🤘, but if 
 you customize the various provisioning scripts, it can be any sort of 
