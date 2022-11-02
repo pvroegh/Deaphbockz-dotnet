@@ -7,11 +7,10 @@ add the created .vhdx (Virtual Hard Disk) file to your bootloader
 and boot natively from this disk. Only the drive is virtual, the rest 
 is all running natively, which means better performance. 
 
-### Used software
-- Convert-WindowsImage Powershell script to convert a Windows .iso to .vhdx.
-  Source can be found here: https://github.com/x0nn/Convert-WindowsImage.
+### Used software:
+Convert-WindowsImage Powershell script to convert a Windows .iso to .vhdx. Source can be found here: https://github.com/x0nn/Convert-WindowsImage.
 
-### Prerequisites
+### Prerequisites:
 - A genuine Windows Installation Media (WIM) .iso file. Can be downloaded from Microsoft or my.visualstudio.com if you have a Visual Studio Subscription.
 - A genuine Windows Product Key for the edition of Windows you want to install.
 - A working Hyper-V installation (optional if you want to boot natively from the .vhdx).
@@ -23,9 +22,16 @@ is all running natively, which means better performance.
   script will be started automatically. This script is setting up your
   Powershell theme for Windows Terminal.
 
+### Estimated runtime:
+Around 45-50 minutes of runtime is to be expected when running unmodified with the following specs:
+- AMD Ryzen 7 5800H 
+- 16 GB RAM
+- NVMe SSD
+- 100 MBit internet connection
+
 ### How to customise:
-- Have a look at the the install-tools.ps1 script: https://github.com/pvroegh/Deaphbockz-dotnet/blob/main/Provisioning/install-tools.ps1
-  In here you can add whatever you want. Find you favorite software here: https://community.chocolatey.org/packages and add it to the script.
+Have a look at the the install-tools.ps1 script: https://github.com/pvroegh/Deaphbockz-dotnet/blob/main/Provisioning/install-tools.ps1.
+In here you can add whatever you want. Find you favorite software here: https://community.chocolatey.org/packages and add it to the script.
   
 ### How to add the created .vhdx to your PC's bootloader:
 - Start cmd.exe as administrator (not Powershell!).
