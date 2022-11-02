@@ -36,6 +36,9 @@ Have a look at the the install-tools.ps1 script: https://github.com/pvroegh/Deap
 In here you can add whatever you want. Find you favorite software here: https://community.chocolatey.org/packages and add it to the script.
   
 ### How to add the created .vhdx to your PC's bootloader:
+- Make sure to have the following software ready in the VM before using the .vhdx to boot natively from:
+  - A driver for your Wifi adapter. 
+  - A driver for your video card.
 - Start cmd.exe as administrator (not Powershell!).
 - Execute the following commands: 
   - `bcdedit /export backup-bootloader.dat` (this makes a backup of your current boot settings).
@@ -45,6 +48,7 @@ In here you can add whatever you want. Find you favorite software here: https://
   - `bcdedit /set {<paste the copied GUID here>} detecthal on`
 - To restore you original boot settings:
   - `bcdedit /import backup-bootloader.dat`
+- **CAUTION!**: When booting natively from the created .vhdx, you _cannot_ use the .vhdx as a Virtual Machine in Hyper-V anymore! The reason for this is the difference in hardware. When running on a hypervisor, the VM will use generic drivers for the (virtual) hardware, but when running natively, the OS will be using your hardware directly. This difference in hardware does not work well in Hyper-V. Your VM likely will crash **unrecoverably** when being started in Hyper-V after a native boot has been done. 
 
 ### Things to improve in the future:
 - Validate VHD Size.
