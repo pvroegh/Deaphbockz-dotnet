@@ -16,7 +16,7 @@ Convert-WindowsImage Powershell script to convert a Windows .iso to .vhdx. Sourc
 - A working Hyper-V installation (optional if you want to boot natively from the .vhdx).
 
 ### How to run:
-- Just run this script as administrator in a Powershell console, but have the following ready to be entered at the prompt:
+- Just run the `Install-Deaphbockz.ps1` script as administrator in a Powershell console, but have the following ready to be entered at the prompt:
   - Relative or absolute path the Windows Installation Media .iso file.
   - Windows Product Key
 - After the installation and provisioning is done, you can start the VM
