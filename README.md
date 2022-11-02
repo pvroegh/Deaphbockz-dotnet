@@ -23,6 +23,10 @@ is all running natively, which means better performance.
   script will be started automatically. This script is setting up your
   Powershell theme for Windows Terminal.
 
+### How to customise:
+- Have a look at the the install-tools.ps1 script: https://github.com/pvroegh/Deaphbockz-dotnet/blob/main/Provisioning/install-tools.ps1
+  In here you can add whatever you want. Find you favorite software here: https://community.chocolatey.org/packages and add it to the script.
+  
 ### How to add the created .vhdx to your PC's bootloader:
 - Start cmd.exe as administrator (not Powershell!).
 - Execute the following commands: 
