@@ -74,7 +74,7 @@ try {
     New-Item -ItemType Directory -Force -Path ".\Vm\$SelectedVMName"
     $AutoUnattendFileFullname = ".\Vm\$SelectedVMName\autounattend.xml"
     Copy-Item -Path ".\Provisioning\autounattend.xml" -Destination $AutoUnattendFileFullname
-    Set-VariablesInAutoUnattendFile -AutoUnattendFileFullname $AutoUnattendFileFullname -Username $SelectedUsername -Password $SelectedUsername -ComputerName $SelectedComputerName -WindowsKey $SelectedWindowsKey
+    Set-VariablesInAutoUnattendFile -AutoUnattendFileFullname $AutoUnattendFileFullname -Username $SelectedUsername -Password $SelectedPassword -ComputerName $SelectedComputerName -WindowsKey $SelectedWindowsKey
 
     # Create the Virtual Hard Disk from the Windows Image Media file and
     # bootstrap it with the autounattend.xml file for unattended installation.
